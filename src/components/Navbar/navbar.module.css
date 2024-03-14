@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.name {
+
+    font-size: 30px;
+    color: yellow;
+}
+
+.links {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.links Link {
+    margin-right: 20px;
+}
