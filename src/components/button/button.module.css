@@ -1,0 +1,25 @@
+.button {
+    position: relative;
+    border: none;
+    background-color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 250ms;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.button:hover {
+    transform: translateY(-10px);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    font-weight: bold;
+
+}
