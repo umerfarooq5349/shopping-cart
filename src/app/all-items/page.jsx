@@ -1,37 +1,25 @@
-
+'use client'
 import styles from './all-items.module.css'
-import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, } from '@fortawesome/free-solid-svg-icons';
-import Card from '@/components/card/page';
+
 import { getAllProducts } from '../api/getAllProducts/getAllProducts';
+import CardWithBtn from '@/components/cardwithbtn/page';
 import { saveProduct } from '../api/cart/addToCart';
 
-
 const AllProducts = async () => {
-
     const product = await getAllProducts();
-    console.log(product.products[0].title);
-
-
+    const handleSaveProduct = (id) => {
+        saveProduct(id);
+    };
     return (
         <div className={styles.container}>
-
             {product.products.map(product => (
-
-                <Card product={product}
-                    img={product.thumbnail}
-                    title={product.title}
-                    price={product.price}
-                    id={product.id}
-                    btn={'Add to Cart'}
-
-                ></Card>
-
+                <CardWithBtn
+                    btn={'Add to cart'}
+                    onClick={() => handleSaveProduct(product.id)}
+                    product={product}
+                    key={product.id} />
             ))}
         </div >
     );
 };
 export default AllProducts;
-
-

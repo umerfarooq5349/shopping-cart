@@ -2,8 +2,9 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../api/cart/addToCart";
 import styles from './cart.module.css'
-import Card from "@/components/card/page";
-import Button from "@/components/button/page";
+
+import CardWithBtn from "@/components/cardwithbtn/page";
+
 const Cart = () => {
     const [data, setData] = useState([]);
 
@@ -12,10 +13,12 @@ const Cart = () => {
             const storedData = await getProducts();
             setData(storedData || []);
         };
-
         fetchData();
     }, []);
 
+    const handleClick = () => {
+        console.log('handleClick')
+    }
     return (
         <div >
             <div className={styles.constainer}>
@@ -27,18 +30,9 @@ const Cart = () => {
                     {data.length > 0 ? (
                         data.map((product, index) => (
                             <div key={index}>
-                                <Card product={product}
-                                    img={product.thumbnail}
-                                    title={product.title}
-                                    price={product.price}
-                                    id={product.id}
-                                    btn={'Buy Now'}
-                                    onClick={() => { }}
-                                >
+                                <CardWithBtn btn={'Buy Now'} product={product} key={product.id} onClick={handleClick}>
 
-
-                                </Card>
-
+                                </CardWithBtn>
                             </div>
                         ))
                     ) : (

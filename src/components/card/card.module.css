@@ -1,4 +1,4 @@
-.card {
+.caard {
     width: 150%;
     display: flex;
     justify-content: space-between;
@@ -12,11 +12,10 @@
     -o-transition: transform 0.3s ease;
 }
 
-.card:hover {
+.caard:hover {
     transform: scale(1.05);
 }
 
-/* Card image */
 .card .img {
     width: 100%;
     height: 200px;

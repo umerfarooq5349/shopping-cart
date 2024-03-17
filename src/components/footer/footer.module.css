@@ -1,0 +1,23 @@
+.container {
+    margin: 20px 0px;
+}
+
+.footer {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.name {
+
+    font-size: 30px;
+    color: yellow;
+}
+
+.details {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+
+    /* font-weight: bold; */
+}

@@ -14,6 +14,10 @@
     margin-bottom: 50px;
 }
 
+.containerHead .total {
+    font-weight: normal;
+}
+
 .containerBody {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

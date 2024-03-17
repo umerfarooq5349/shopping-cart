@@ -1,0 +1,17 @@
+.card {
+    width: 150%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 5px 10px 5px 2px rgb(0, 0, 0, 0.3);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
