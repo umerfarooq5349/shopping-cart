@@ -1,11 +1,12 @@
 'use client'
 
-import { addToCart, saveProduct } from '@/app/api/cart/addToCart';
+
 import styles from './card.module.css';
 import Image from 'next/image';
-import Button from '../button/page';
 
-const Card = ({ product, btn }) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollar, faStar, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
+const Card = ({ product, }) => {
 
 
     return (
@@ -21,9 +22,30 @@ const Card = ({ product, btn }) => {
                 </div>
                 <div className={styles.cardBottom}>
                     <div className={styles.price}>
-                        <h3 className={styles.price_title}>$ {product.price}</h3>
+                        <h3 className={styles.price_title}>
+                            <FontAwesomeIcon icon={faDollar} color='yellow' /> {product.price}</h3>
                     </div>
-                    <p>{product.rating}</p>
+                    <div className={styles.ratings}>
+
+                        {product.rating <= 3.9 ? (
+                            <div className={styles.ratings}>
+                                <FontAwesomeIcon icon={faStar} color='yellow' />
+                                <FontAwesomeIcon icon={faStar} color='yellow' />
+                                <FontAwesomeIcon icon={faStar} color='yellow' />
+                                <FontAwesomeIcon icon={faStarHalfStroke} color='yellow' />
+
+                            </div>
+                        ) : (
+                            <div className={styles.ratings}>
+                                <FontAwesomeIcon icon={faStar} color='yellow' />
+                                <FontAwesomeIcon icon={faStar} color='yellow' />
+                                <FontAwesomeIcon icon={faStar} color='yellow' />
+                                <FontAwesomeIcon icon={faStar} color='yellow' />
+                                <FontAwesomeIcon icon={faStarHalfStroke} color='yellow' />
+
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

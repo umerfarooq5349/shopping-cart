@@ -24,6 +24,7 @@ export const saveProduct = async (id) => {
     localStorage.setItem("myCartStr", myCartStr);
 
     // get str from local storage
+    console.log("saved");
     getProducts();
   } catch (error) {
     console.error("Error:", error);

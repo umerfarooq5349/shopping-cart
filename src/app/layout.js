@@ -1,3 +1,7 @@
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
+import { Config } from "@fortawesome/fontawesome-svg-core";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Navbar/navbar";

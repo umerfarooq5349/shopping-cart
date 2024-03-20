@@ -1,7 +1,9 @@
-
-import Card from '../card/page';
+// components/CardWithBtn.jsx
 import styles from './cardWithBtn.module.css';
-import Button from '../button/page';
+import Card from '@/components/card/page';
+
+import Btn from '../button/page';
+
 const CardWithBtn = ({ product, btn, onClick }) => {
     return (
         <div className={styles.card}>
@@ -11,10 +13,10 @@ const CardWithBtn = ({ product, btn, onClick }) => {
                 title={product.title}
                 price={product.price}
                 id={product.id}
-                btn={btn}
+
                 rating={product.rating}
             />
-            <Button btn={btn} onClick={onClick} />
+            <Btn btn={btn} onClick={onClick} />
         </div>
     );
 };
