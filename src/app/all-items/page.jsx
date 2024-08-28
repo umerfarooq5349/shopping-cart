@@ -5,6 +5,7 @@ import { getAllProducts } from '../api/getAllProducts/getAllProducts';
 import CardWithBtn from '@/components/cardwithbtn/page';
 import { saveProduct } from '../api/cart/addToCart';
 
+// eslint-disable-next-line @next/next/no-async-client-component
 const AllProducts = async () => {
     const product = await getAllProducts();
     const handleSaveProduct = (id) => {
